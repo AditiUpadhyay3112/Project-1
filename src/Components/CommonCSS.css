@@ -4,3 +4,8 @@
     background-size: cover;
     background-attachment: fixed;
 }
+.userformimg{
+    background-image: url(../Images/Pizza1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

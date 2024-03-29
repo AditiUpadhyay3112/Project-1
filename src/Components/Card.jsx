@@ -4,7 +4,7 @@ const Card1 = ({Imag}) => {
   return (
     <>
 <div className='border-white mx-10 border-2 overflow-hidden rounded-lg  bg-[#4d4c4cc3] '>
-    <div className='h-[200px]'>
+    <div className='h-[200px] overflow-hidden'>
         <img src={Imag} alt="" className='w-full h-full  hover:scale-125 duration-700' />
     </div>
     <div className='p-4 text-white'>
