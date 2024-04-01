@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Heading from './Heading';
 import Btn2 from './Btn2';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const ChangePassword = () => {
+  const [showPassword, setShowPassword] = useState(false);
     return (
         <div className='flex justify-center bg-[#08080857] overflow-hidden items-center py-8 w-full min-h-screen'>
         <div className='relative container rounded-3xl shadow-lg shadow-black w-[80%] grid md:grid-cols-2 h-fit'>
@@ -26,7 +28,12 @@ const ChangePassword = () => {
                     </div>
                     <div className="mb-4">
                         <label htmlFor="password" className="block text-xl font-medium text-white">Confirm New Password</label>
-                        <input type="password" id="pass" name="pass" className="mt-1 text-white py-2 px-2 font-semibold  block w-full shadow-sm sm:text-sm bg-transparent border-b-2" />
+                        <div className='relative'>
+                        <input type={showPassword ? "text" : "password"}  id="pass" name="pass" className="mt-1 text-white py-2 px-2 font-semibold  block w-full shadow-sm sm:text-sm bg-transparent border-b-2" />
+                        <div className='text-white absolute top-[50%] right-3 cursor-pointer translate-y-[-50%] ' onClick={() => setShowPassword((prev)=> !prev)}>
+                        {showPassword ? <FaEye/> : <FaEyeSlash/>}
+                        </div>
+                        </div>
                     </div>
                     <div>
                         <NavLink to={"/login"}>

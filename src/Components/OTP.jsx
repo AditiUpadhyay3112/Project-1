@@ -25,7 +25,7 @@ const OTP = () => {
                     </div>
                     <div>
 
-                        <NavLink to={"/login"}>
+                        <NavLink to={"/change-password"}>
                        <Btn2 btnval={"Submit"}/>
                         </NavLink>
                     </div>
